@@ -1,31 +1,60 @@
 <!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>Landed by HTML5 UP</title>
+		<title>ESCO</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script>
+		  function phoneCopy() {
+			  const Toast = Swal.mixin({
+			  toast: true,
+			  position: "top-end",
+			  showConfirmButton: false,
+			  timer: 3000,
+			  timerProgressBar: true,
+			  didOpen: (toast) => {
+				toast.onmouseenter = Swal.stopTimer;
+				toast.onmouseleave = Swal.resumeTimer;
+			  }
+			});
+			Toast.fire({
+			  icon: "success",
+			  title: "Phone Number copied to clipboard!"
+			});
+			navigator.clipboard.writeText("69420");
+			return true;
+		  }
+		</script>
+<!--
+		<script>
+			function myFunction() {
+			  var copyText = document.getElementById("phone");
+			  copyText.select();
+			  copyText.setSelectionRange(0, 99999)
+			  document.execCommand("copy");
+			  alert("Copied the text: " + copyText.value);
+			}
+		</script>
+-->
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<h1 id="logo"><a href="index.html">ESCO</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a onclick="return phoneCopy()" >Contact Me</a></li>
+<!--
 							<li>
-								<a href="#">Layouts</a>
+								<a onclick="return phoneCopy()" >Contact Me</a>
 								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a </a></li>
 									<li><a href="no-sidebar.html">No Sidebar</a></li>
 									<li>
 										<a href="#">Submenu</a>
@@ -38,8 +67,9 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
+-->
+<!--							<li><a href="elements.html">Information</a></li>-->
+<!--							<li><a href="#" class="button primary">Sign Up</a></li>-->
 						</ul>
 					</nav>
 				</header>
@@ -48,16 +78,29 @@
 				<section id="banner">
 					<div class="content">
 						<header>
+							<h2>Johnny Esco</h2>
+							<p>Photography at its finest.</p>
+						</header>
+						<span class="image"><img src="images/johnnyesco.png" alt="" /></span>
+					</div>
+					
+					<a href="#album" class="goto-next scrolly">&nbsp;</a>
+				</section>
+				
+				<section id="album">
+					<div class="content">
+						<header>
 							<h2>The future has landed</h2>
 							<p>And there are no hoverboards or flying cars.<br />
 							Just apps. Lots of mother flipping apps.</p>
 						</header>
 						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
+<!--					<a href="#one" class="goto-next scrolly">Next</a>-->
 				</section>
 
 			<!-- One -->
+<!--
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
 					<div class="content">
@@ -88,8 +131,10 @@
 					</div>
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
+-->
 
 			<!-- Two -->
+<!--
 				<section id="two" class="spotlight style2 right">
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 					<div class="content">
@@ -104,8 +149,10 @@
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
+-->
 
 			<!-- Three -->
+<!--
 				<section id="three" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					<div class="content">
@@ -120,8 +167,10 @@
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
+-->
 
 			<!-- Four -->
+<!--
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
@@ -169,8 +218,10 @@
 						</footer>
 					</div>
 				</section>
+-->
 
 			<!-- Five -->
+<!--
 				<section id="five" class="wrapper style2 special fade">
 					<div class="container">
 						<header>
@@ -185,6 +236,7 @@
 						</form>
 					</div>
 				</section>
+-->
 
 			<!-- Footer -->
 				<footer id="footer">
