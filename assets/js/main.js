@@ -1,4 +1,19 @@
+const listItems = document.querySelectorAll('#list li a');
+			listItems.forEach(e => e.addEventListener('click', clickHandler));
 
+			function clickHandler(e) {
+			  copy(e.target.textContent);
+			}
+
+			function copy(text) {
+				var input = document.createElement('input');
+				input.setAttribute('value', text);
+				document.body.appendChild(input);
+				input.select();
+				var result = document.execCommand('copy');
+				document.body.removeChild(input);
+				return result;
+			 }
 
 (function($) {
 
@@ -242,6 +257,6 @@
 
 		$banner
 			._parallax();
-	
+
 
 })(jQuery);

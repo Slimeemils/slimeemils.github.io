@@ -7,39 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script>
-		  function phoneCopy() {
-			  const Toast = Swal.mixin({
-			  toast: true,
-			  position: "top-end",
-			  showConfirmButton: false,
-			  timer: 3000,
-			  timerProgressBar: true,
-			  didOpen: (toast) => {
-				toast.onmouseenter = Swal.stopTimer; 
-				toast.onmouseleave = Swal.resumeTimer;
-			  }
-			});
-			Toast.fire({
-			  icon: "success",
-			  title: "Phone Number copied to clipboard!"
-			});
-			navigator.clipboard.writeText("69420");
-			return true;
-		  }
-		</script>
-<!--
-		<script>
-			function myFunction() {
-			  var copyText = document.getElementById("phone");
-			  copyText.select();
-			  copyText.setSelectionRange(0, 99999)
-			  document.execCommand("copy");
-			  alert("Copied the text: " + copyText.value);
-			}
-		</script>
--->
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -49,12 +16,11 @@
 					<h1 id="logo"><a href="index.html">ESCO</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a onclick="return phoneCopy()" >Contact Me</a></li>
-<!--
 							<li>
-								<a onclick="return phoneCopy()" >Contact Me</a>
-								<ul>
-									<li><a </a></li>
+								<a>Contact Me</a>
+								<ul id="list">
+									<li>Phone<a>8320035807</a></li>
+<!--
 									<li><a href="no-sidebar.html">No Sidebar</a></li>
 									<li>
 										<a href="#">Submenu</a>
@@ -65,9 +31,9 @@
 											<li><a href="#">Option 4</a></li>
 										</ul>
 									</li>
+-->
 								</ul>
 							</li>
--->
 <!--							<li><a href="elements.html">Information</a></li>-->
 <!--							<li><a href="#" class="button primary">Sign Up</a></li>-->
 						</ul>
@@ -86,18 +52,26 @@
 					
 					<a href="#album" class="goto-next scrolly">&nbsp;</a>
 				</section>
-				
-				<section id="album">
-					<div class="content">
-						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
-						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+<!--				<section id="album" class="photos">-->
+					<div class="photos">
+					
+                        
+                            <iframe allowfullscreen="" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/d7d4a28390.html"></iframe>
+                        
+<!--                		<iframe allowfullscreen="" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/d7d4a28390.html#view=FitH"></iframe> -->
 					</div>
-<!--					<a href="#one" class="goto-next scrolly">Next</a>-->
+<!--				</section>-->
+<!--
+				<section id="one" class="spotlight style1 bottom">
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<iframe allowfullscreen="" scrolling="no" class="fp-iframe" style="border: 0px; width: 100%; height: 400px;" src="https://heyzine.com/flip-book/d7d4a28390.html"></iframe>
+							</div>
+						</div>
+					</div>
 				</section>
+-->
 
 			<!-- One -->
 <!--
@@ -239,6 +213,7 @@
 -->
 
 			<!-- Footer -->
+<!--
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -252,6 +227,7 @@
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
+-->
 
 		</div>
 
