@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #222;
+}
+
+/* Navigation Bar Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Dropdown aligned to the right */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: rgba(0,0,0,0.00);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdown-content .copy-field {
+  padding: 8px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-content .copy-field:hover {
+  background-color: #444;
+}
+
+.dropdown-wrapper:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .dropdown-wrapper {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    right: 0;
+    left: auto;
+  }
+}
+
+
+/* Navbar */
+nav {
+  background: #1a1a1a;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+/* Dropdown Styles */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdown-content .copy-field {
+  padding: 8px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-content .copy-field:hover {
+  background-color: #444;
+}
+
+/* Show dropdown on hover */
+.dropdown-wrapper:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('assets/images/johnnyesco.png') center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+}
+
+.hero img {
+  width: 150px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.scroll-down {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 30px;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  color: #fff;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Contact Dropdown Fallback */
+#contactDropdown {
+  display: none;
+  background: #333;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #555;
+}
+
+#contactDropdown p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid #444;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Responsive Dropdown Positioning */
+@media (max-width: 600px) {
+  .dropdown-content {
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+}
